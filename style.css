@@ -1,0 +1,108 @@
+body,h1,h2,h3,p,a,li,ul {
+    margin: 0;
+    padding: 0;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 600px;
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: "Poppins", sans-serif;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    ;
+}
+
+
+.app{
+    background: #fff;
+    padding: 64px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 8px;
+}
+
+
+.app h1{
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+
+
+.tarefa-item{
+    padding: 16px 32px;
+    background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+border-radius: 8px;
+margin-bottom: 32px;
+display: flex;
+align-items: center;
+
+
+}
+
+
+.tarefa-item p{
+    color: #fff;
+}
+
+
+.tarefa-item a {
+    display: inline-flex;
+    align-items: center;
+}
+
+
+
+.tarefa-item  ion-icon{
+    margin-right: 16px;
+    color: red;
+    font-size: 22px;
+}
+
+
+.adicionar{
+    display: flex;
+    align-items: center;
+
+}
+
+.inputTarefa{
+    padding: 16px 32px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    outline: none;
+    border-radius: 8px;
+    margin-right: 16px;
+    
+    
+}
+
+
+.btnAdd{
+display: inline-flex;
+justify-content: center;
+padding: 16px 32px;
+background-color: #8BC6EC;
+background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+border: none;
+color: #fff;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+border-radius: 8px;
+cursor: pointer;
+
+}
