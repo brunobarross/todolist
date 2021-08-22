@@ -14,6 +14,9 @@ function adicionarTarefa() {
         deletarTarefa();
         inputTarefa.value ='';
         inputTarefa.focus();
+        console.log(Arraytarefas);
+
+        
      
     }
 
@@ -38,6 +41,8 @@ function criarElemento(elemento, elementoPai) {
     elementoPai.appendChild(novoElemento);
     criarBotao(novoElemento);
     Arraytarefas.push(novoElemento);
+
+
 
 
 }
@@ -69,11 +74,12 @@ function deletarTarefa() {
     btnClose.forEach((botao, index) => {
        botao.addEventListener('click', (e)=> {
            lista[index].remove();
+            Arraytarefas.splice(index);
+        
         });
        
     })
 }
-
 
 
 
