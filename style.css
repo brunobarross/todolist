@@ -1,22 +1,55 @@
-body,h1,h2,h3,p,a,li,ul {
+body,
+h1,
+h2,
+h3,
+p,
+a,
+li,
+ul {
     margin: 0;
     padding: 0;
 
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
 
-body{
-    min-height: 600px;
-    height: 100vh;
-    overflow-y: hidden;
-    font-family: "Poppins", sans-serif;
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 6px;
+    background: #F4F4F4;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 8px;
+
+
 }
 
-main{
+
+body {
+    min-height: 600px;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: "Poppins", sans-serif;
+    scrollbar-face-color: red;
+  
+}
+
+@media(max-width: 1024px){
+        body{
+            min-height: auto;
+
+        }
+}
+
+main {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -28,81 +61,149 @@ main{
 }
 
 
-.app{
+.app {
     background: #fff;
     padding: 64px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border-radius: 8px;
+    border-radius: 16px;
+    margin: 0 auto;
+    
+
 }
 
 
-.app h1{
+.app h1 {
     text-align: center;
     margin-bottom: 64px;
+    font-size: 2rem;
+}
+
+.tarefa-wrapper{
+    overflow-y: scroll;
+    max-height: 300px;
+    padding-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+   
 }
 
 
 
-.tarefa-item{
+.tarefa-item {
     padding: 16px 32px;
     background-color: #8BC6EC;
-background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-border-radius: 8px;
-margin-bottom: 32px;
-display: flex;
-align-items: center;
-
-
-}
-
-
-.tarefa-item p{
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border-radius: 8px;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
     color: #fff;
-}
+    justify-content: space-between;
+    width: 100%;
+    transition: transform .3s ease;
 
+}
 
 .tarefa-item a {
     display: inline-flex;
-    align-items: center;
+    justify-content: center;
+
+
 }
 
 
-
-.tarefa-item  ion-icon{
-    margin-right: 16px;
+.tarefa-item a ion-icon {
     color: red;
-    font-size: 22px;
+    font-size: 18px;
+    order: 1;
 }
 
 
-.adicionar{
+.adicionar {
     display: flex;
     align-items: center;
+    width: 100%;
+ 
 
 }
 
-.inputTarefa{
+
+.inputTarefa {
     padding: 16px 32px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
     outline: none;
     border-radius: 8px;
     margin-right: 16px;
-    
-    
+    width: 100%;
+
+
 }
 
 
-.btnAdd{
-display: inline-flex;
-justify-content: center;
-padding: 16px 32px;
-background-color: #8BC6EC;
-background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-border: none;
-color: #fff;
-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-border-radius: 8px;
-cursor: pointer;
+.btnAdd {
+    display: inline-flex;
+    justify-content: center;
+    padding: 16px 32px;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    border: none;
+    color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    border-radius: 8px;
+    cursor: pointer;
 
+
+}
+
+
+.vai{
+    transform: translateX(-110vw);
+}
+
+
+
+
+@media(max-width: 1024px){
+
+    .app{
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+       
+    }
+
+    .app h1{
+        font-size: 1.5rem ;
+        margin-bottom: 1.5rem;
+    }
+
+    .tarefa-wrapper{
+        max-height: 7rem;
+        max-width: 100%;
+        margin: 0 auto 2.5rem auto;
+        padding-bottom: 0;
+    }
+
+    .tarefa-item{
+        margin-bottom: 1rem;
+        padding: 8px 16px;
+    }
+
+    .adicionar{
+        width: 100%;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .inputTarefa {
+        margin-right: 0;
+    }
+
+    .btnAdd{
+        margin-top: 16px;
+        width: 100%;
+    }
 }
